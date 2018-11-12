@@ -1,0 +1,14 @@
+/.metadata/
+.project
+/bin/
+/.recommenders/
+/RemoteSystemsTempFiles/
+/doc/
+/.gradle/
+/build/
+.classpath
+/.settings/
+/.idea/
+/out/
+java-examples.iml
+/src/main/resources/
