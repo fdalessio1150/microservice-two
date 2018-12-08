@@ -10,6 +10,13 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class Controller {
 
+    @RequestMapping(value = "/v1/clients", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public String getClients(@RequestBody Client client) throws InterruptedException {
+        Thread.sleep(800);
+        return "Nome do cliente: " + client.getName();
+    }
+    
     @RequestMapping(value = "/v1/work/{time}", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public String postClients(@PathVariable Long time, @RequestBody Client client) throws InterruptedException {
